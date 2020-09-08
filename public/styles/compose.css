@@ -1,15 +1,40 @@
-#tweet-text {
+.new-tweet{
   display: flex;
-  width: 35vw;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tweet-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#tweet-text {
   border-style: none; 
   border-bottom: 4px solid #545149; 
   background-color: #f4f1ec;
+  margin-top: -35px;
 
 }
 
 .tweet-button {
-  display: flex;
   background-color: #4056A1;
+  margin: 5px;
   color: #FFFFFF;
   font-family: bungee;
+}
+
+.counter {
+  text-align: right;
+  font-family: bungee;
+}
+
+.button-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-label {
+  z-index: 10;
+  font-family: Source Sans Pro;
 }
