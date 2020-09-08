@@ -14,3 +14,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+.tweet-article-body {
+  margin: 1.5em;
+}
