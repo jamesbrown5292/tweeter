@@ -35,4 +35,5 @@ app.listen(PORT, () => {
 
 app.post("/tweets", (req, res) => {
   console.log("form received");
+  res.redirect("/tweets");
 })
