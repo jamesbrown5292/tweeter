@@ -8,13 +8,16 @@ footer {
   border-top: 3px solid #545149;
   display: flex;
   justify-content: space-between;
+  margin: 0em 1em
+
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  margin: 0em 1em
 }
 
 .tweet-article-body {
-  margin: 1.5em;
+  margin: 2em;
 }
