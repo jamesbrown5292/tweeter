@@ -12,8 +12,10 @@
 #tweet-text {
   border-style: none; 
   border-bottom: 4px solid #545149; 
-  background-color: #f4f1ec;
-  margin-top: -35px;
+  background-color: transparent;
+  outline: none;
+  height: 30px;
+  resize: none;
 
 }
 
@@ -24,7 +26,7 @@
   font-family: bungee;
 }
 
-#charCounter {
+#char-counter {
   text-align: right;
   font-family: bungee;
 }

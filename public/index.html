@@ -25,12 +25,20 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- External icons -->
+    <script src="https://kit.fontawesome.com/90e4eb8664.js" crossorigin="anonymous"></script>
+
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="navSpan">Tweeter</span>
+      <div class ="tweet-button-container">
+        <span class="navSpan"><b>Write</b> a tweet</span>
+        <i class="arrowicon fas fa-angle-double-down" id="arrow-icon"></i>
+      </div>
     </nav>
     <header>
       <div>
@@ -48,15 +56,27 @@
         <p>Tweets will go in this - the child div of the main section</p>
       </div>
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form class="tweet-box" action="/tweets" method="POST">
           <label class="box-label" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class ="button-counter">
             <button type="submit" class="tweet-button">Tweet</button>
-            <output name="counter" class="counter" id="charCounter" for="tweet-text">140</output>
+            <output name="counter" class="counter" id="char-counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="alluserstweets">
+        <article>
+          <header>
+            <p>James</p>
+            <p>@theCreator</p>
+          </header>
+          Tweet tweet. This is the body of the tweet.
+          <footer>
+            <p>This is the footer.</p>
+            <p>Icons.</p>
+          </footer>
+        </article>
       </section>
     </main>
 
