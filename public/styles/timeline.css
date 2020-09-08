@@ -1,0 +1,16 @@
+article {
+  border: 3px solid #545149;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  border-top: 3px solid #545149;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
