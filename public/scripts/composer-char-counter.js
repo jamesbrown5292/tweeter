@@ -7,5 +7,10 @@ $(document).ready(() => {
   //try console log 'this'
   //use the function keyword not fat arrow
   //use this to grab the textarea value's length
-  //
+  let textarea = $('textarea');
+  textarea.on('keydown', function() {
+    console.log(140 - this.value.length);
+  });
+
+
 })
