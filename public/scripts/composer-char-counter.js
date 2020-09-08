@@ -8,9 +8,10 @@ $(document).ready(() => {
   //use the function keyword not fat arrow
   //use this to grab the textarea value's length
   let textarea = $('textarea');
-  textarea.on('keydown', function() {
-    console.log(140 - this.value.length);
+  let counter = $('#charCounter');
+  textarea.on('keyup', function() {
+    let inputLength = this.value.length; 
+    let charsRemaining = 140 - inputLength;
+    counter.text(charsRemaining);
   });
-
-
 })
