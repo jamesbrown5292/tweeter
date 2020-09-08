@@ -3,11 +3,13 @@ nav {
   height: 120px;
   width: 100vw;
   background-color: #4056A1;
+  display: flex;
 }
 
 span.navSpan {
   font-family: bungee, sans-serif;
   font-size: 24px;
   color: #FFFFFF;
-  margin: 0 1.5em 0 1.5em;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  align-self: center;
 }
