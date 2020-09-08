@@ -1,0 +1,15 @@
+#tweet-text {
+  display: flex;
+  width: 35vw;
+  border-style: none; 
+  border-bottom: 4px solid #545149; 
+  background-color: #f4f1ec;
+
+}
+
+.tweet-button {
+  display: flex;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: bungee;
+}
