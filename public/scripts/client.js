@@ -30,7 +30,7 @@ $(() => {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
 
   const createTweetElement = (tweetObject) => {
@@ -52,7 +52,7 @@ $(() => {
       </div>
     </footer>
   </article>`);
-  return $tweet;
+    return $tweet;
   };
 
   const renderTweets = (tweets) => {
@@ -65,8 +65,8 @@ $(() => {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       console.log($tweet);
-      $allTweetsSection.append($tweet)
+      $allTweetsSection.append($tweet);
     }
-  }
+  };
   renderTweets(data);
 });
