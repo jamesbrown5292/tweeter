@@ -24,9 +24,7 @@ nav {
 
 }
 
-.tweet-button-container{
-  font-family: bungee, sans-serif;
-  font-size: 24px;
+.write-tweet-button-container{
   display: flex;
   flex-direction: column;
   align-items: center;
