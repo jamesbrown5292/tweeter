@@ -42,7 +42,7 @@ $(() => {
       </div>
       <p class="hide">${tweetObject.user.handle}</p>
     </header>
-    <p class="tweet-article-body">${tweetData.content.text}</p>
+    <p class="tweet-article-body">${tweetObject.content.text}</p>
     <footer>
       <p>${tweetObject.created_at}</p>
       <div class="like-fav-retweet-icons">
@@ -55,16 +55,18 @@ $(() => {
   return $tweet;
   };
 
-  const renderTweets = (tweets) {
+  const renderTweets = (tweets) => {
     //loop through the tweets
     //calls createElement on each tweet
     //takes the value and appends to container
-    const $tweet = createTweetElement(tweetData);
+    const $allTweetsSection = $('.all-users-tweets');
+    $allTweetsSection.empty();
+
     for (let tweet of tweets) {
-      
+      const $tweet = createTweetElement(tweet);
+      console.log($tweet);
+      $allTweetsSection.append($tweet)
     }
   }
-
-  console.log($tweet);
-  $('.all-users-tweets').append($tweet);
-})
+  renderTweets(data);
+});
