@@ -68,5 +68,17 @@ $(() => {
       $allTweetsSection.append($tweet);
     }
   };
-  renderTweets(data);
+
+  const $postTweetForm = $('.tweet-box')
+  $('postTweetForm').on('submit', function (event) {
+    event.preventDefault();
+    const serializedData = this.serialize();
+    $.post('/tweets/', serializedData)
+      .then((response) => {console.log(response)});
+  })
+
+
+
+
+  //renderTweets(data);
 });
