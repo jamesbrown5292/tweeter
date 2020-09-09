@@ -8,8 +8,8 @@ footer {
   border-top: 3px solid #545149;
   display: flex;
   justify-content: space-between;
-  margin: 0em 1em
-
+  margin: 0em 1em;
+  align-items: baseline;
 }
 
 header {
