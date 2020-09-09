@@ -27,7 +27,7 @@ body {
 main {
   display: flex;
   max-width: 90%;
-  margin: 0 auto; 
+  margin: 1.5em auto; 
   flex-direction: column;
   position: relative;
   justify-content: center;
