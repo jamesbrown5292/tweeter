@@ -6,6 +6,10 @@ article {
 
 }
 
+.all-users-tweets {
+  margin-top: 1.5em; 
+}
+
 article:hover {
   box-shadow: 10px 13px 5px 0px rgba(180,183,240,1);
   filter: opacity(100%)
