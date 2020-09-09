@@ -4,6 +4,10 @@ article {
   flex-direction: column;
 }
 
+article:hover {
+  box-shadow: 10px 13px 5px 0px rgba(180,183,240,1);
+}
+
 footer {
   border-top: 3px solid #545149;
   display: flex;
