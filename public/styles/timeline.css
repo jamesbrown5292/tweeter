@@ -21,3 +21,10 @@ header {
 .tweet-article-body {
   margin: 2em;
 }
+
+.username-with-icon {
+  display: flex;
+  align-items: center;
+  flex-basis: 20%;
+  justify-content: space-between;
+}
