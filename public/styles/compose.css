@@ -39,3 +39,9 @@
 .box-label {
   z-index: 10;
 }
+
+textarea {
+  color: #545149;
+  font-family: Source Sans Pro;
+}
+

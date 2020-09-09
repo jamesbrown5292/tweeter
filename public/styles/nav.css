@@ -11,13 +11,22 @@ nav {
 }
 
 .write-tweet-button-container {
-  font-family: bungee, sans-serif;
-  font-size: 24px;
   color: #FFFFFF;
   align-self: center;
 }
 
+.tweeter-logo {
+  font-family: bungee, sans-serif;
+  font-size: 24px;
+  color: #FFFFFF;
+  align-self: center;
+  padding: 1.5em;
+
+}
+
 .tweet-button-container{
+  font-family: bungee, sans-serif;
+  font-size: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;

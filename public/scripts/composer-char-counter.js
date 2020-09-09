@@ -13,7 +13,7 @@ $(document).ready(() => {
     let inputLength = target.value.length; 
     let charsRemaining = 140 - inputLength;
     if ( charsRemaining > 0 ) {
-      counter.text(charsRemaining).css({color: "black"});
+      counter.text(charsRemaining).css({color: "#545149"});
     } else {
       counter.text(charsRemaining).css({color: "red"});
     }
