@@ -45,3 +45,11 @@ textarea {
   font-family: Source Sans Pro;
 }
 
+.alert-messaging {
+  border: 2px solid red;
+  margin-top: -17px;
+  margin-bottom: 8px;
+  height: 45.9px;
+  color: red;
+  text-align: center;
+}

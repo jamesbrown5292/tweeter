@@ -59,13 +59,22 @@ $(() => {
     event.preventDefault();
     const $textarea = $('textarea');
     const $tweetContent = $textarea.val();
+    const $writeTweetBox = $('.tweet-box')
+    const $alertBox = $('<div class="alert-messaging"></div>')
     if (!$tweetContent.length) {
-      alert('You need to write something before you tweet.')
+      $('.alert-messaging').remove();
+      $writeTweetBox.prepend($alertBox);
+      $alertBox.text('You can\'t post an empty tweet. That would be silly.')
     } else if ($tweetContent === null) {
-      alert('Sorry, that\'s not a valid tweet');
+      $('.alert-messaging').remove();
+      $writeTweetBox.prepend($alertBox);
+      $alertBox.text('You can\'t post an empty tweet. That would be silly.')
     } else if ($tweetContent.length > 140) {
-      alert('Your tweet is too long! Tweets must be 140 characters or less.');
+      $('.alert-messaging').remove();
+      $writeTweetBox.prepend($alertBox);
+      $alertBox.text('Your tweet is too long. Keep it to 140 characters or less!')
     } else {
+      $('.alert-messaging').remove();
       const serializedData = $(this).serialize();
       $.post('/tweets/', serializedData)
         .then((response) => {
