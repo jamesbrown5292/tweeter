@@ -10,27 +10,39 @@ html {
   box-sizing: inherit;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
 /*
  * Global layout stuff
  */
 
 /*##### DESKTOP VIEW ##########*/
-@media (min-width: 1024px ) {
-  
+
+
+@media (max-width: 1023px ) {
   body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: Source Sans Pro;  /*set fall back font if this fails*/
+    font-weight: 400;
   }
-
   main {
-    order: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    max-width: 90%;
+    margin: 1.5em auto; 
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
   }
-
-  
-  
 }
 
 
@@ -43,13 +55,11 @@ body {
   font-family: Source Sans Pro;  /*set fall back font if this fails*/
   font-weight: 400;
 }
-
 main {
   display: flex;
-  max-width: 90%;
-  margin: 1.5em auto; 
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
+
+
