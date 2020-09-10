@@ -4,7 +4,6 @@ article {
   flex-direction: column;
   filter: opacity(75%);
   margin: 1em;
-
 }
 
 .all-users-tweets {
