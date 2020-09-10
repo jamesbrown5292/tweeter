@@ -55,15 +55,25 @@ $(() => {
 
   const $postTweetForm = $('.tweet-box'); //this class name is confusing. 
 
-/*
+
   $postTweetForm.on('submit', function(event) {
-    const $tweetLength = 
     event.preventDefault();
+    const $textarea = $('textarea');
+    const $tweetContent = $textarea.val();
+    if (!$tweetContent.length) {
+      alert('You need to write something before you tweet.')
+    } else if ($tweetContent === null) {
+      alert('Sorry, that\'s not a valid tweet');
+    } else if ($tweetContent.length > 140) {
+      alert('Your tweet is too long! Tweets must be 140 characters or less.');
+    }
+
+    console.log();
     const serializedData = $(this).serialize();
     console.log(serializedData);
     $.post('/tweets/', serializedData);
   });
-*/
+
 
 
 });
