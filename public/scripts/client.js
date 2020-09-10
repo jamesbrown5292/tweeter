@@ -28,13 +28,13 @@ $(() => {
     return $tweet;
   };
 
+  const $allTweetsSection = $('.all-users-tweets');
+
   const renderTweets = (tweets) => {
     //loop through the tweets
     //calls createElement on each tweet
     //takes the value and appends to container
-    const $allTweetsSection = $('.all-users-tweets');
     $allTweetsSection.empty();
-
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $allTweetsSection.append($tweet);
@@ -42,7 +42,6 @@ $(() => {
   };
 
   const loadTweets = function() {
-
     $.ajax('/tweets/', {type: "get"})
       .then((tweets) => {
         renderTweets(tweets);
@@ -50,11 +49,9 @@ $(() => {
       .fail((error) => {
         console.log(error, "We couldn't find any tweets");
       });
-
-  }();
-
+  };
+  loadTweets();
   const $postTweetForm = $('.tweet-box'); //this class name is confusing. 
-
 
   $postTweetForm.on('submit', function(event) {
     event.preventDefault();
@@ -66,12 +63,13 @@ $(() => {
       alert('Sorry, that\'s not a valid tweet');
     } else if ($tweetContent.length > 140) {
       alert('Your tweet is too long! Tweets must be 140 characters or less.');
+    } else {
+      const serializedData = $(this).serialize();
+      $.post('/tweets/', serializedData);
+      $allTweetsSection.empty();
+      loadTweets();
     }
-
-    console.log();
-    const serializedData = $(this).serialize();
-    console.log(serializedData);
-    $.post('/tweets/', serializedData);
+      
   });
 
 
