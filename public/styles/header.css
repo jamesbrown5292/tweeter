@@ -22,9 +22,7 @@
     background-image: url("../images/blizzard.png");
   }
 
-  .user-full-name {
-    margin-top: 0;
-  }
+  
 }
 
 .user-header{
@@ -41,5 +39,10 @@
 
 img {
   border-style: none;
-  padding: 0.5em;
+  padding-top: 1em;
 }
+
+.user-full-name {
+  margin-top: -10px;
+}
+
