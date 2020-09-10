@@ -3,11 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
+/* GO back and append jQuery lines one at a time */
 $(() => {
-
+  let tweetIdNum = 0;
   const createTweetElement = (tweetObject) => {
-    const $tweet = $(` <article>
+    const $tweet = $(` <article id="${tweetIdNum}">
     <header>
       <div class="username-with-icon">
         <i class="fas fa-user-astronaut"></i>
@@ -15,8 +15,9 @@ $(() => {
       </div>
       <p class="hide">${tweetObject.user.handle}</p>
     </header>
-    <p class="tweet-article-body">${tweetObject.content.text}</p>
-    <footer>
+    `)
+    $tweet.append($("<p>").addClass("tweet-article-body").text(tweetObject.content.text));
+    $tweet.append(`<footer>
       <p>${tweetObject.created_at}</p>
       <div class="like-fav-retweet-icons">
         <i class="fas fa-heart"></i>
@@ -25,6 +26,7 @@ $(() => {
       </div>
     </footer>
   </article>`);
+
     return $tweet;
   };
 
@@ -65,12 +67,14 @@ $(() => {
       alert('Your tweet is too long! Tweets must be 140 characters or less.');
     } else {
       const serializedData = $(this).serialize();
-      $.post('/tweets/', serializedData);
-      $allTweetsSection.empty();
-      $textarea.val('');
-      loadTweets();
+      $.post('/tweets/', serializedData)
+        .then((response) => {
+          console.log(response);
+          $allTweetsSection.empty();
+          $textarea.val('');
+          loadTweets();
+        });
     }
-      
   });
 
 
