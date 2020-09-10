@@ -68,26 +68,35 @@ $(() => {
       $allTweetsSection.append($tweet);
     }
   };
+
   const loadTweets = function() {
     //use jquery to make a request to /tweets
     //receive the array of tweets as JSON
-    $.get('/tweets/', {
-      method: 'get',
-      dataType: 'json',
-      success: (tweets) => {
+    // $.ajax('/tweets/', {
+    //   method: 'GET',
+    //   success: (tweets) => { //undefined
+    //     console.log(tweets);
+    //     console.log("hello load tweets");
+    //   } 
+    //})
+
+    $.ajax('/tweets/')
+      .then((tweets) => {
         renderTweets(tweets);
-      }  
-    })
-  }
+      })
+      .fail((error) => {console.log(error, "We couldn't find any tweets" )})
+
+  }();
 
   const $postTweetForm = $('.tweet-box')
+
+
   $postTweetForm.on('submit', function (event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
     console.log(serializedData);
     $.post('/tweets/', serializedData)
   })
-
 
 
 
