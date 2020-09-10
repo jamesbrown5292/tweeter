@@ -16,11 +16,20 @@ html {
 
 /*##### DESKTOP VIEW ##########*/
 @media (min-width: 1024px ) {
-
-  main {
+  
+  body {
     display: flex;
     flex-direction: row;
   }
+
+  main {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  
   
 }
 
