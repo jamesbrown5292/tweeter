@@ -40,7 +40,6 @@ main {
     margin: 1.5em auto; 
     flex-direction: column;
     position: relative;
-    justify-content: center;
     align-items: center;
   }
 }
@@ -58,7 +57,6 @@ body {
 main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 
 }
 
