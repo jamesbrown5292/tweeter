@@ -67,6 +67,7 @@ $(() => {
       const serializedData = $(this).serialize();
       $.post('/tweets/', serializedData);
       $allTweetsSection.empty();
+      $textarea.val('');
       loadTweets();
     }
       
