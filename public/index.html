@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="/styles/timeline.css" type="text/css" />
 
     <!-- Link to google fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
     
-    <!-- External JS -->
+    <!-- External JS --> <!--jQuery in body not in header as page needs to load first. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- External icons -->
@@ -36,7 +36,7 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+
     <nav>
       <span class="tweeter-logo">Tweeter</span>
       <div class ="write-tweet-button-container">
@@ -44,29 +44,38 @@
         <i class="arrowicon fas fa-angle-double-down" id="arrow-icon"></i>
       </div>
     </nav>
+
+
     <header class="user-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <p class="user-full-name"><b>James</b> Brown</p>
+          <p class="user-full-name"> <b>James</b> Brown</p> <!--this won't work with dynamic html-->
       </div>
   </header>
+
+
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <form class="tweet-box" action="/tweets" method="POST">
           <label class="box-label" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class ="button-counter">
             <button type="submit" class="tweet-button">Tweet</button>
-            <output name="counter" class="counter" id="char-counter" for="tweet-text">140</output>
+            <output name="counter" class="tweet-length-counter" id="tweet-char-counter" for="tweet-text"></output>
           </div>
         </form>
       </section>
+
+
       <section class="all-users-tweets">
+
         <article>
+
           <header>
             <div class="username-with-icon">
               <i class="fas fa-user-astronaut"></i>
@@ -74,7 +83,9 @@
             </div>
             <p class="hide">@theCreator</p>
           </header>
+
           <p class="tweet-article-body">Tweet tweet. This is the body of the tweet.</p>
+
           <footer>
             <p>10 days ago</p>
             <div class="like-fav-retweet-icons">
@@ -83,6 +94,7 @@
               <i class="fas fa-flag"></i>
             </div>
           </footer>
+
         </article>
         <div>
           <span class="material-icons">
@@ -126,7 +138,7 @@
         </div>
       </section>
     </main>
-
+    <!-- jQuery here -->
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>

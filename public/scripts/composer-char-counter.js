@@ -1,14 +1,8 @@
-//Check doc ready so nothing can be executed before page content is loaded in full
+//This calculates the characters remaining for the tweet and affects the color of the text based on if there are enough characters remaining
 $(document).ready(() => {
   console.log("document is ready");
-  //add a jQuery event listeneer
-  //use $selector.event((event) => {console.log(event)});
-  //listen for one of: change, keydown, keyup, blur, keypress;
-  //try console log 'this'
-  //use the function keyword not fat arrow
-  //use this to grab the textarea value's length
-  let textarea = $('textarea');
-  let counter = $('#char-counter');
+  let textarea = $('textarea'); //don't be too general with this - make more speciic
+  let counter = $('#tweet-char-counter');
   textarea.on('input', function({ target }) {
     let inputLength = target.value.length; 
     let charsRemaining = 140 - inputLength;

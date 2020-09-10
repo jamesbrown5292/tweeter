@@ -6,33 +6,6 @@
 
 $(() => {
 
-
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
-
   const createTweetElement = (tweetObject) => {
     const $tweet = $(` <article>
     <header>
@@ -64,40 +37,35 @@ $(() => {
 
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      console.log($tweet);
       $allTweetsSection.append($tweet);
     }
   };
 
   const loadTweets = function() {
-    //use jquery to make a request to /tweets
-    //receive the array of tweets as JSON
-    // $.ajax('/tweets/', {
-    //   method: 'GET',
-    //   success: (tweets) => { //undefined
-    //     console.log(tweets);
-    //     console.log("hello load tweets");
-    //   } 
-    //})
 
-    $.ajax('/tweets/')
+    $.ajax('/tweets/', {type: "get"})
       .then((tweets) => {
         renderTweets(tweets);
       })
-      .fail((error) => {console.log(error, "We couldn't find any tweets" )})
+      .fail((error) => {
+        console.log(error, "We couldn't find any tweets");
+      });
 
   }();
 
-  const $postTweetForm = $('.tweet-box')
+  const $postTweetForm = $('.tweet-box'); //this class name is confusing. 
 
-
-  $postTweetForm.on('submit', function (event) {
+/*
+  $postTweetForm.on('submit', function(event) {
+    const $tweetLength = 
     event.preventDefault();
     const serializedData = $(this).serialize();
     console.log(serializedData);
-    $.post('/tweets/', serializedData)
-  })
-
+    $.post('/tweets/', serializedData);
+  });
+*/
 
 
 });
+
+//Leave high level comments for the endpoint behaviours, don't detail the code. 

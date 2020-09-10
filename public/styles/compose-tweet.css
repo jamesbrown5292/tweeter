@@ -16,8 +16,9 @@
   outline: none;
   height: 30px;
   resize: none;
-
 }
+
+/* rename all these classes */ 
 
 .tweet-button {
   background-color: #4056A1;
@@ -26,7 +27,7 @@
   font-family: bungee;
 }
 
-#char-counter {
+#tweet-char-counter {
   text-align: right;
   font-family: bungee;
 }
