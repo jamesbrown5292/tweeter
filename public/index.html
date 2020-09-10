@@ -27,6 +27,7 @@
     
     <!-- External JS --> <!--jQuery in body not in header as page needs to load first. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 
     <!-- External icons -->
     <script src="https://kit.fontawesome.com/90e4eb8664.js" crossorigin="anonymous"></script>
@@ -39,9 +40,11 @@
 
     <nav>
       <span class="tweeter-logo">Tweeter</span>
-      <div class ="write-tweet-button-container">
-        <span><b>Write</b> a tweet</span>
-        <i class="arrowicon fas fa-angle-double-down" id="arrow-icon"></i>
+      <div class ="write-tweet-button-container clickable">
+        <span class="clickable-text"><b>Write</b> a tweet</span>
+        <div>        
+          <i class="arrowicon fas fa-angle-double-down" id="arrow-icon"></i>
+        </div>
       </div>
     </nav>
 
@@ -60,7 +63,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-      <section class="new-tweet">
+      <div class="alert-box-container">
+        <div class="alert-messaging">Error</div>
+      </div>
+
+      <section class="new-tweet" id="new-tweet">
         <form class="tweet-box" action="/tweets" method="POST">
           <label class="box-label" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>

@@ -1,4 +1,28 @@
 /*Main Nav bar color and font */ 
+
+@keyframes chevron-bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+
+  75% {
+    transform: translateY(2px);
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 nav {
   height: 120px;
   width: 100vw;
@@ -29,6 +53,16 @@ nav {
 }
 
 .arrowicon {
+  justify-items: flex-end;
   color: red;
+  z-index: 20;
+  animation-name: chevron-bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite
+}
+
+.clickable-text {
+  cursor: pointer;
+  
 }
 
