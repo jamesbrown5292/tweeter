@@ -1,7 +1,5 @@
 /* Mobile View */
 @media (max-width: 1023px ) {
-
-
   .new-tweet{
     display: flex;
     flex-direction: column;
@@ -69,7 +67,6 @@
     margin-bottom: -0.5em;
     margin-top: -2em;
     display: flex;
-}
   }
 }
 
@@ -78,7 +75,7 @@
 
   .new-tweet {
     margin-top: 25em;
-    margin-bottom: -9em;
+    margin-bottom: -21em;
     align-self: center;
     width: 90%;
   }
@@ -86,6 +83,7 @@
   .tweet-box {
     display: flex;
     flex-direction: column;
+    margin-top: -16em;
   }
 
   #tweet-text {
