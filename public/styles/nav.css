@@ -1,27 +1,29 @@
-/*Main Nav bar color and font */ 
+
+
 /* Desktop View */
-@keyframes chevron-bounce {
-  0% {
-    transform: translateY(0);
-  }
+@media (min-width: 1024px ) {
+  @keyframes chevron-bounce {
+    0% {
+      transform: translateY(0);
+    }
 
-  25% {
-    transform: translateY(2px);
-  }
+    25% {
+      transform: translateY(2px);
+    }
 
-  50% {
-    transform: translateY(6px);
-  }
+    50% {
+      transform: translateY(6px);
+    }
 
-  75% {
-    transform: translateY(2px);
-  }
-  
-  100% {
-    transform: translateY(0);
+    75% {
+      transform: translateY(2px);
+    }
+    
+    100% {
+      transform: translateY(0);
+    }
   }
 }
-
 
 nav {
   height: 120px;
@@ -31,7 +33,7 @@ nav {
   justify-content: space-between;
   padding: 1.5em;
   position: fixed;
-  z-index: 0;
+  z-index: 10;
 }
 
 
@@ -67,6 +69,28 @@ nav {
 
 /* Tablet view */
 @media (max-width: 1023px ) {
+  @keyframes chevron-bounce {
+    0% {
+      transform: translateY(0);
+    }
+
+    25% {
+      transform: translateY(2px);
+    }
+
+    50% {
+      transform: translateY(6px);
+    }
+
+    75% {
+      transform: translateY(2px);
+    }
+    
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   nav {
     background-color: transparent;
     padding: 0.5em;
@@ -84,8 +108,9 @@ nav {
 }
 
 /* Mobile view */
-@media (max-width: 600px ) {
-  .clickable-text{
+ @media (max-width: 600px ) {
+  .write-tweet-button-container {
     margin-top: 1em;
   }
-}
+
+} 

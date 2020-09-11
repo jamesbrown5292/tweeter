@@ -7,47 +7,6 @@
   }
 } 
 
-/* Mobile View */
-@media (max-width: 1023px ) {
-
-  header {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  .user-header {
-    background-color: #d89a39;
-    color: white;
-    background-image: url(../images/blizzard.png);
-    margin-top: 0;
-    width: 100%;
-    height: 55vw;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    
-  }
-
-  .user-full-name {
-    margin-top: -12%;
-    margin-bottom: -1em;
-  }
-
-  
-}
-
-/*Tiny view - shrinks image if window too small */
-@media (max-width: 600px) {
-  .user-full-name {
-    transform: translateY(-4em);
-  }
-
-  .user-header {
-    display: flex;
-    flex-direction: column;
-    padding-top: 21vw;
-  }
-}
 
 /* Desktop View */
 @media (min-width: 1024px ) {
@@ -78,3 +37,47 @@
     margin-bottom: -1em;
   }
 }
+
+
+
+/* Tablet View */
+@media (max-width: 1023px ) {
+
+  header {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .user-header {
+    background-color: #d89a39;
+    color: white;
+    background-image: url(../images/blizzard.png);
+    margin-top: 0;
+    width: 100%;
+    height: 55vw;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .user-full-name {
+    margin-top: -12%;
+    margin-bottom: -1em;
+  }
+}
+
+
+/*Mobile view - shrinks image if window too small */
+@media (max-width: 600px) {
+  .user-full-name {
+    transform: translateY(-4em);
+  }
+
+  .user-header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 21vw;
+  }
+}
+

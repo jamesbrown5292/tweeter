@@ -1,4 +1,75 @@
-/* Mobile View */
+
+
+/*DESKTOP VIEW */
+@media (min-width: 1024px ) {
+
+  .new-tweet {
+    margin-top: 25em;
+    margin-bottom: -21em;
+    align-self: center;
+    width: 90%;
+  }
+
+  .tweet-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: -16em;
+  }
+
+  #tweet-text {
+    border-style: none; 
+    border-bottom: 4px solid #545149; 
+    background-color: transparent;
+    outline: none;
+    height: 30px;
+    resize: none;
+  }
+
+  .tweet-button {
+    background-color: #4056A1;
+    margin: 5px;
+    color: #FFFFFF;
+    font-family: bungee;
+  }
+
+  #tweet-char-counter {
+    text-align: right;
+    font-family: bungee;
+  }
+
+  .button-counter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box-label {
+    z-index: 10;
+  }
+
+  textarea {
+    color: #545149;
+    font-family: Source Sans Pro;
+  }
+
+
+  .alert-messaging {
+    border: 3px solid red;
+    margin-bottom: -14em;
+    margin-left: 2vw;
+    width: 55vw;
+    color: red;
+    text-align: center;
+  }
+
+  .alert-box-container {
+    height: 1.5em;
+    height: 1.5em;
+    margin-bottom: -8.5em;
+    margin-top: 8em;
+  }
+}
+
+/* Tablet View */
 @media (max-width: 1023px ) {
   .new-tweet{
     display: flex;
@@ -70,71 +141,12 @@
   }
 }
 
-/*DESKTOP VIEW */
-@media (min-width: 1024px ) {
-
-  .new-tweet {
-    margin-top: 25em;
-    margin-bottom: -21em;
-    align-self: center;
-    width: 90%;
-  }
-
-  .tweet-box {
-    display: flex;
-    flex-direction: column;
-    margin-top: -16em;
-  }
-
-  #tweet-text {
-    border-style: none; 
-    border-bottom: 4px solid #545149; 
-    background-color: transparent;
-    outline: none;
-    height: 30px;
-    resize: none;
-  }
-
-  .tweet-button {
-    background-color: #4056A1;
-    margin: 5px;
-    color: #FFFFFF;
-    font-family: bungee;
-  }
-
-  #tweet-char-counter {
-    text-align: right;
-    font-family: bungee;
-  }
-
-  .button-counter {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .box-label {
-    z-index: 10;
-  }
-
-  textarea {
-    color: #545149;
-    font-family: Source Sans Pro;
-  }
-
-
+/* Mobile view */
+@media (max-width: 600px ) {
   .alert-messaging {
-    border: 3px solid red;
-    margin-bottom: -14em;
-    margin-left: 2vw;
-    width: 55vw;
-    color: red;
-    text-align: center;
+    font-size: small;
+    height: 30px;
+    width: 80vw;
   }
-
-  .alert-box-container {
-    height: 1.5em;
-    height: 1.5em;
-    margin-bottom: -10.5em;
-    margin-top: 8em;
-  }
+  
 }
