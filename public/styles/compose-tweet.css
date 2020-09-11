@@ -120,4 +120,7 @@ textarea {
 
 .alert-box-container {
   height: 1.5em;
+  height: 1.5em;
+  margin-bottom: -11em;
+  margin-top: 11em;
 }
