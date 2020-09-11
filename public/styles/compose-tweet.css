@@ -61,6 +61,10 @@
   }
 }
 
+
+.new-tweet {
+  margin-top: 10.5em;
+}
 #tweet-text {
   border-style: none; 
   border-bottom: 4px solid #545149; 
@@ -68,4 +72,44 @@
   outline: none;
   height: 30px;
   resize: none;
+}
+
+.tweet-button {
+  background-color: #4056A1;
+  margin: 5px;
+  color: #FFFFFF;
+  font-family: bungee;
+}
+
+#tweet-char-counter {
+  text-align: right;
+  font-family: bungee;
+}
+
+.button-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-label {
+  z-index: 10;
+}
+
+textarea {
+  color: #545149;
+  font-family: Source Sans Pro;
+}
+
+
+.alert-messaging {
+  border: 3px solid red;
+  margin-top: -17px;
+  margin-bottom: 8px;
+  height: 35px;
+  color: red;
+  text-align: center;
+}
+
+.alert-box-container {
+  height: 1.5em;
 }

@@ -59,97 +59,62 @@
     <main class="container">
 
 
-    <header class="user-header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <p class="user-full-name"> <b>James</b> Brown</p> <!--this won't work with dynamic html-->
-      </div>
-    </header>
+      <header class="user-header">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <p class="user-full-name"> <b>James</b> Brown</p> <!--this won't work with dynamic html-->
+        </div>
+      </header>
 
       <div class="alert-box-container">
         <div class="alert-messaging">Error</div>
       </div>
 
-      <section class="new-tweet" id="new-tweet">
-        <form class="tweet-box" action="/tweets" method="POST">
-          <label class="box-label" for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class ="button-counter">
-            <button type="submit" class="tweet-button">Tweet</button>
-            <output name="counter" class="tweet-length-counter" id="tweet-char-counter" for="tweet-text">140</output>
-          </div>
-        </form>
+      <section class="compose-and-view">
+
+        <section class="new-tweet" id="new-tweet">
+          <form class="tweet-box" action="/tweets" method="POST">
+            <label class="box-label" for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class ="button-counter">
+              <button type="submit" class="tweet-button">Tweet</button>
+              <output name="counter" class="tweet-length-counter" id="tweet-char-counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+  
+  
+        <section class="all-users-tweets">
+  
+          <article>
+  
+            <header>
+              <div class="username-with-icon">
+                <i class="fas fa-user-astronaut"></i>
+                <p>James</p>
+              </div>
+              <p class="hide">@theCreator</p>
+            </header>
+  
+            <p class="tweet-article-body">Tweet tweet. This is the body of the tweet.</p>
+  
+            <footer>
+              <p>10 days ago</p>
+              <div class="like-fav-retweet-icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-retweet"></i>
+                <i class="fas fa-flag"></i>
+              </div>
+            </footer>
+  
+          </article>
+        </section>
+
       </section>
 
-
-      <section class="all-users-tweets">
-
-        <article>
-
-          <header>
-            <div class="username-with-icon">
-              <i class="fas fa-user-astronaut"></i>
-              <p>James</p>
-            </div>
-            <p class="hide">@theCreator</p>
-          </header>
-
-          <p class="tweet-article-body">Tweet tweet. This is the body of the tweet.</p>
-
-          <footer>
-            <p>10 days ago</p>
-            <div class="like-fav-retweet-icons">
-              <i class="fas fa-heart"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-flag"></i>
-            </div>
-          </footer>
-
-        </article>
-        <div>
-          <span class="material-icons">
-            directions_bike 
-          </span>
-          <span class="material-icons">
-            child_care
-          </span>
-          <span class="material-icons">
-            psychology
-          </span>
-          <span class="material-icons">
-            school
-          </span>
-          <span class="material-icons">
-            insert_emoticon
-          </span>
-          <span class="material-icons">
-            nature_people
-          </span>
-          <i class="fas fa-snowman"></i>
-          <i class="fas fa-hospital-user"></i>
-          <i class="fas fa-chalkboard-teacher"></i>
-          <i class="fas fa-user-tie"></i>
-          <i class="fas fa-user-md"></i>
-          <i class="fas fa-user-injured"></i>
-          <i class="fas fa-user-secret"></i>
-          <i class="fas fa-user-nurse"></i>
-          <i class="fas fa-user-ninja"></i>
-          <i class="fas fa-user-lock"></i>
-          <i class="fas fa-user-edit"></i>
-          <i class="fas fa-user-astronaut"></i>
-          <i class="fas fa-swimmer"></i>
-          <i class="fas fa-snowboarding"></i>
-          <i class="fas fa-skiing-nordic"></i>
-          <i class="fas fa-skiing"></i>
-          <i class="fas fa-skating"></i>
-          <i class="fas fa-baby"></i>
-          <i class="fas fa-dragon"></i>
-          
-        </div>
-      </section>
     </main>
     <!-- jQuery here -->
     <!-- App JS -->
