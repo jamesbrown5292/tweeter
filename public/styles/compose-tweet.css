@@ -11,6 +11,8 @@
   .tweet-box {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    width: 90%;
   }
 
   #tweet-text {
