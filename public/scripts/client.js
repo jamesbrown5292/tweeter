@@ -56,7 +56,9 @@ $(() => {
               <i class="fas fa-retweet"></i>
               <i class="fas fa-flag"></i>
             </div>
-          </footer>`);
+          </footer>
+        </article>`
+          );
     return $tweet;
   };
 
