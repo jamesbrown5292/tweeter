@@ -8,6 +8,7 @@ $(() => {
 
   //Clicking write tweet icon in top right
   $('.write-tweet-button-container').on('click', function() {
+    $('.alert-messaging').hide();
     if ($composeTweetSection.is(":hidden")) {
       $composeTweetSection.slideDown("2000");
       $textInputField.focus();
