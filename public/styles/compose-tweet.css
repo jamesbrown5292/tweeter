@@ -75,8 +75,9 @@
 
 /*DESKTOP VIEW */
 @media (min-width: 1024px ) {
+
   .new-tweet {
-    margin-top: 11em;
+    margin-top: 25em;
     margin-bottom: -9em;
     align-self: center;
     width: 90%;

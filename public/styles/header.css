@@ -39,7 +39,7 @@
 /*Tiny view - shrinks image if window too small */
 @media (max-width: 600px) {
   .user-full-name {
-    transform: translateY(-3em);
+    transform: translateY(-4em);
   }
 
   .user-header {

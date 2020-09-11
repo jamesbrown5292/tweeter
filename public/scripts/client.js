@@ -36,7 +36,6 @@ $(() => {
     }
 
     const $tweet = $(` <article>
-
           <header>
             <div class="username-with-icon">
               <i class="fas fa-user-astronaut"></i>
@@ -55,7 +54,6 @@ $(() => {
               <i class="fas fa-flag"></i>
             </div>
           </footer>`)
-
     return $tweet;
   };
 

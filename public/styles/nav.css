@@ -65,7 +65,7 @@ nav {
   cursor: pointer;
 }
 
-/* Mobile view */
+/* Tablet view */
 @media (max-width: 1023px ) {
   nav {
     background-color: transparent;
@@ -80,5 +80,12 @@ nav {
     padding: 1.5em;
     z-index: 0;
   
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px ) {
+  .clickable-text{
+    margin-top: 1em;
   }
 }
