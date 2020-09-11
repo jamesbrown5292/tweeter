@@ -15,36 +15,6 @@ main {
   justify-content: flex-start;
 }
 
-/*Tablet View */
-@media (max-width: 1023px ) {
-  img {
-    transform: scale(1);
-  }
-}
-
-/*##### Mobile View ##########*/
-@media (max-width: 1023px ) {
-  body {
-    display: flex;
-    flex-direction: column;
-    color: #545149;
-    background-color: #f4f1ec;
-    font-size: 24px;
-    font-family: Source Sans Pro;  /*set fall back font if this fails*/
-    font-weight: 400;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/*Tiny view - shrinks image if window too small */
-@media (max-width: 600px) {
-  img {
-    transform: scale(0.3);
-  }
-}
 /* Desktop View */
 @media (min-width: 1024px ) {
   body {
@@ -53,7 +23,7 @@ main {
     color: #545149;
     background-color: #f4f1ec;
     font-size: 24px;
-    font-family: Source Sans Pro;  /*set fall back font if this fails*/
+    font-family: Source Sans Pro, sans-serif;
     font-weight: 400;
   }
   main {
@@ -62,4 +32,30 @@ main {
 
   }
 }
+
+
+/* Tablet View */
+@media (max-width: 1023px ) {
+  body {
+    display: flex;
+    flex-direction: column;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: 400;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*Mobile view - shrinks image if window too small */
+@media (max-width: 600px) {
+  img {
+    transform: scale(0.4);
+  }
+}
+
 
