@@ -12,7 +12,6 @@ html {
 
 main {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
 }
 
@@ -21,9 +20,7 @@ main {
  * Global layout stuff
  */
 
-/*##### DESKTOP VIEW ##########*/
-
-
+/*##### Mobile View ##########*/
 @media (max-width: 1023px ) {
   body {
     display: flex;
@@ -36,28 +33,25 @@ main {
   }
   main {
     display: flex;
-    max-width: 90%;
-    margin: 1.5em auto; 
     flex-direction: column;
-    position: relative;
-    align-items: center;
+    max-width: 90%;
   }
 }
+/* Desktop View */
+@media (min-width: 1024px ) {
+  body {
+    display: flex;
+    flex-direction: column;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: Source Sans Pro;  /*set fall back font if this fails*/
+    font-weight: 400;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
 
-
-body {
-  display: flex;
-  flex-direction: column;
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: Source Sans Pro;  /*set fall back font if this fails*/
-  font-weight: 400;
+  }
 }
-main {
-  display: flex;
-  flex-direction: row;
-
-}
-/* Handle putting user tweets on next row for desktop view */
 
