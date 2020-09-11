@@ -64,6 +64,7 @@
 /*DESKTOP VIEW */
 .new-tweet {
   margin-top: 11em;
+  margin-bottom: -9em;
   align-self: center;
   width: 90%;
 }
