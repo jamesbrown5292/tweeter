@@ -112,8 +112,8 @@ textarea {
 .alert-messaging {
   border: 3px solid red;
   margin-top: -17px;
-  margin-bottom: 8px;
-  height: 35px;
+  margin-left: 2vw;
+  width: 55vw;
   color: red;
   text-align: center;
 }
