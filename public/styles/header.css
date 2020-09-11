@@ -5,7 +5,9 @@
     width: 33%;
     height: 65%;
   }
-} /* Mobile View */
+} 
+
+/* Mobile View */
 @media (max-width: 1023px ) {
 
   header {
@@ -33,6 +35,20 @@
 
   
 }
+
+/*Tiny view - shrinks image if window too small */
+@media (max-width: 600px) {
+  .user-full-name {
+    transform: translateY(-3em);
+  }
+
+  .user-header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 21vw;
+  }
+}
+
 /* Desktop View */
 @media (min-width: 1024px ) {
 

@@ -40,7 +40,7 @@ $(() => {
           <header>
             <div class="username-with-icon">
               <i class="fas fa-user-astronaut"></i>
-              <p>James</p>
+              <p>${tweetObject.user.name}</p>
             </div>
             <p class="hide">${tweetObject.user.handle}</p>
           </header>

@@ -36,6 +36,13 @@ main {
     flex-direction: column;
   }
 }
+
+/*Tiny view - shrinks image if window too small */
+@media (max-width: 600px) {
+  img {
+    transform: scale(0.3);
+  }
+}
 /* Desktop View */
 @media (min-width: 1024px ) {
   body {
