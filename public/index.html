@@ -70,7 +70,6 @@
       </header>
 
       
-
       <section class="compose-and-view">
 
         <div class="alert-box-container">
@@ -78,6 +77,7 @@
         </div>
         
         <section class="new-tweet" id="new-tweet">
+
           <form class="tweet-form" action="/tweets" method="POST">
             <label class="box-label" for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
@@ -86,37 +86,12 @@
               <output name="counter" class="tweet-length-counter" id="tweet-char-counter" for="tweet-text">140</output>
             </div>
           </form>
+
         </section>
-  
-  
-        <section class="all-users-tweets">
-  
-          <article>
-  
-            <header>
-              <div class="username-with-icon">
-                <i class="fas fa-user-astronaut"></i>
-                <p>James</p>
-              </div>
-              <p class="hide">@theCreator</p>
-            </header>
-  
-            <p class="tweet-article-body">Tweet tweet. This is the body of the tweet.</p>
-  
-            <footer>
-              <p>10 days ago</p>
-              <div class="like-fav-retweet-icons">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-retweet"></i>
-                <i class="fas fa-flag"></i>
-              </div>
-            </footer>
-  
-          </article>
-        </section>
+
+        <section class="all-users-tweets"></section>
 
       </section>
-
     </main>
     <!-- jQuery here -->
     <!-- App JS -->
