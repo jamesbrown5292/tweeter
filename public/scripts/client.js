@@ -63,7 +63,7 @@ $(() => {
   const $allTweetsSection = $('.all-users-tweets');
   const $textInputField = $('textarea');
   const $composeTweetSection = $('.new-tweet');
-  const $postTweetForm = $('.tweet-box'); //this class name is confusing.
+  const $postTweetForm = $('.tweet-form'); 
 
   const renderTweets = (tweets) => {
     $allTweetsSection.empty();
