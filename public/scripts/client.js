@@ -17,6 +17,24 @@ $(() => {
       return div.innerHTML;
     }
 
+    //timestamp conversion
+    const convertTime = function(timestamp) {
+      const rightNow = new Date();
+      const millisecondsAgo = rightNow - timestamp;
+      const daysAgo = Math.floor(millisecondsAgo / 86400000);
+      const hoursAgo = Math.floor(millisecondsAgo / 3600000);
+      const yearsAgo = Math.floor(millisecondsAgo / 31536000000)
+      if (daysAgo < 1) {
+        return hoursAgo + " hours ago";
+      } else if (daysAgo === 1) {
+        return daysAgo + " day ago";
+      } else if (daysAgo >= 365 && daysAgo < 730) {
+        return yearsAgo + " year ago";
+      } else {
+        return yearsAgo + " years ago";
+      }
+    }
+
     const $tweet = $(` <article>
 
           <header>
@@ -30,7 +48,7 @@ $(() => {
           <p class="tweet-article-body">${escape(tweetObject.content.text)}</p>
 
           <footer>
-            <p>${tweetObject.created_at}</p>
+            <p>${convertTime(tweetObject.created_at)}</p>
             <div class="like-fav-retweet-icons">
               <i class="fas fa-heart"></i>
               <i class="fas fa-retweet"></i>
