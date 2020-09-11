@@ -8,6 +8,9 @@
 } /* Mobile View */
 @media (max-width: 1023px ) {
 
+  header {
+    margin: 0;
+  }
   .user-header {
     background-color: #d89a39;
     color: white;

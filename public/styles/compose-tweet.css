@@ -1,4 +1,6 @@
+/* Mobile View */
 @media (max-width: 1023px ) {
+
 
   .new-tweet{
     display: flex;
@@ -51,77 +53,87 @@
     border: 3px solid red;
     margin-top: -17px;
     margin-bottom: 8px;
+    margin-left: 1em;
+    font-size: smaller;
     height: 35px;
+    width: 95vw;
     color: red;
     text-align: center;
   }
 
   .alert-box-container {
     height: 1.5em;
+    height: 1.5em;
+    margin-bottom: -0.5em;
+    margin-top: -2em;
+    display: flex;
+}
   }
 }
 
 /*DESKTOP VIEW */
-.new-tweet {
-  margin-top: 11em;
-  margin-bottom: -9em;
-  align-self: center;
-  width: 90%;
-}
+@media (min-width: 1024px ) {
+  .new-tweet {
+    margin-top: 11em;
+    margin-bottom: -9em;
+    align-self: center;
+    width: 90%;
+  }
 
-.tweet-box {
-  display: flex;
-  flex-direction: column;
-}
+  .tweet-box {
+    display: flex;
+    flex-direction: column;
+  }
 
-#tweet-text {
-  border-style: none; 
-  border-bottom: 4px solid #545149; 
-  background-color: transparent;
-  outline: none;
-  height: 30px;
-  resize: none;
-}
+  #tweet-text {
+    border-style: none; 
+    border-bottom: 4px solid #545149; 
+    background-color: transparent;
+    outline: none;
+    height: 30px;
+    resize: none;
+  }
 
-.tweet-button {
-  background-color: #4056A1;
-  margin: 5px;
-  color: #FFFFFF;
-  font-family: bungee;
-}
+  .tweet-button {
+    background-color: #4056A1;
+    margin: 5px;
+    color: #FFFFFF;
+    font-family: bungee;
+  }
 
-#tweet-char-counter {
-  text-align: right;
-  font-family: bungee;
-}
+  #tweet-char-counter {
+    text-align: right;
+    font-family: bungee;
+  }
 
-.button-counter {
-  display: flex;
-  justify-content: space-between;
-}
+  .button-counter {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.box-label {
-  z-index: 10;
-}
+  .box-label {
+    z-index: 10;
+  }
 
-textarea {
-  color: #545149;
-  font-family: Source Sans Pro;
-}
+  textarea {
+    color: #545149;
+    font-family: Source Sans Pro;
+  }
 
 
-.alert-messaging {
-  border: 3px solid red;
-  margin-bottom: -14em;
-  margin-left: 2vw;
-  width: 55vw;
-  color: red;
-  text-align: center;
-}
+  .alert-messaging {
+    border: 3px solid red;
+    margin-bottom: -14em;
+    margin-left: 2vw;
+    width: 55vw;
+    color: red;
+    text-align: center;
+  }
 
-.alert-box-container {
-  height: 1.5em;
-  height: 1.5em;
-  margin-bottom: -10.5em;
-  margin-top: 8em;
+  .alert-box-container {
+    height: 1.5em;
+    height: 1.5em;
+    margin-bottom: -10.5em;
+    margin-top: 8em;
+  }
 }
