@@ -22,15 +22,15 @@ The app is designed for 3 viewport sizes: monitor, tablet and mobile.
 
 ## Final Product
 
-!["Desktop app page"](https://github.com/jamesbrown5292/tinyApp/blob/master/docs/Log%20in.png)
+!["Desktop app page"](https://github.com/jamesbrown5292/tweeter/blob/master/public/images/Desktop%20View.png)
 
 
 
-!["Tablet View"](https://github.com/jamesbrown5292/tinyApp/blob/master/docs/My%20urls.png)
+!["Tablet View"](https://github.com/jamesbrown5292/tweeter/blob/master/public/images/Tablet-view.png)
 
 
 
-!["Mobile View"](https://github.com/jamesbrown5292/tinyApp/blob/master/docs/Edit%20URL.png)
+!["Mobile View"](https://github.com/jamesbrown5292/tweeter/blob/master/public/images/Mobile%20View.png)
 
 
 
