@@ -13,7 +13,7 @@ $(() => {
       let div = document.createElement('div');
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
-    }
+    };
 
     //timestamp conversion
     const convertTime = function(timestamp) {
@@ -21,14 +21,14 @@ $(() => {
       const millisecondsAgo = rightNow - timestamp;
       const daysAgo = Math.floor(millisecondsAgo / 86400000);
       const hoursAgo = Math.floor(millisecondsAgo / 3600000);
-      const yearsAgo = Math.floor(millisecondsAgo / 31536000000)
+      const yearsAgo = Math.floor(millisecondsAgo / 31536000000);
       if (daysAgo < 1) {
         if (hoursAgo > 1) {
-        return hoursAgo + " hours ago";
+          return hoursAgo + " hours ago";
         } else if (hoursAgo === 1) {
           return hoursAgo + " hour ago";
         } else {
-          return "Within the last hour"
+          return "Within the last hour";
         }
       } else if (daysAgo === 1) {
         return daysAgo + " day ago";
@@ -37,7 +37,7 @@ $(() => {
       } else {
         return yearsAgo + " years ago";
       }
-    }
+    };
 
     
     const $tweet = $(` <article>
@@ -56,12 +56,14 @@ $(() => {
               <i class="fas fa-retweet"></i>
               <i class="fas fa-flag"></i>
             </div>
-          </footer>`)
+          </footer>`);
     return $tweet;
   };
 
   const $allTweetsSection = $('.all-users-tweets');
   const $textInputField = $('textarea');
+  const $composeTweetSection = $('.new-tweet');
+  const $postTweetForm = $('.tweet-box'); //this class name is confusing.
 
   const renderTweets = (tweets) => {
     $allTweetsSection.empty();
@@ -81,45 +83,31 @@ $(() => {
       });
   };
 
-  loadTweets(); 
+  loadTweets();
 
-
-  
-    
-  const $composeTweetBoxSection = $('.new-tweet');
   $('.write-tweet-button-container').on('click', function() {
-    $composeTweetBoxSection.slideDown("2000");
+    $composeTweetSection.slideDown("2000");
     $textInputField.focus();
   });
 
 
-  const $postTweetForm = $('.tweet-box'); //this class name is confusing. 
   $postTweetForm.on('submit', function(event) {
     event.preventDefault();
     $('.alert-messaging').hide();
     const $tweetContent = $textInputField.val();
-    const $writeTweetBox = $('.tweet-box')
-    const $alertBoxContainer = $('.alert-box-container');
     const $alertBox = $('.alert-messaging');
-    const $newTweetBox = $('.new-tweet')
-    
     const insertAlertElements = (alertMessage) => {
       $alertBox.text(alertMessage).slideDown("2000");
-      //$alertBoxContainer.slideDown("2000")
     };
     
     if (!$tweetContent.length || $tweetContent === null) {
-      const alertMessage = '\u26A0 ' +  'You can\'t post an empty tweet. That would be silly.' + ' \u26A0'
+      const alertMessage = '\u26A0 ' +  'You can\'t post an empty tweet. That would be silly.' + '  \u26A0';
       insertAlertElements(alertMessage);
-
-
     } else if ($tweetContent.length > 140) {
-      const alertMessage = '\u26A0 ' + 'Your tweet is too long. Keep it to 140 characters or less!' + ' \u26A0'
-      //removeAlertElements();
-      insertAlertElements(alertMessage)
+      const alertMessage = '\u26A0 ' + 'Your tweet is too long. Keep it to 140 characters or less!' + '  \u26A0';
+      insertAlertElements(alertMessage);
     } else {
       const serializedData = $(this).serialize();
-      //removeAlertElements();
 
       $.post('/tweets/', serializedData)
         .then((response) => {
@@ -127,8 +115,7 @@ $(() => {
           $textInputField.val('');
           loadTweets();
         });
-    };
-
+    }
   });
 });
 
