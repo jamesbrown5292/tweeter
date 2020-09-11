@@ -1,9 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-/* GO back and append jQuery lines one at a time */
+
+
 $(() => {
   $('.alert-messaging').hide();
   $('.arrowicon').effect('bounce', "fast");
@@ -38,7 +34,7 @@ $(() => {
     const $tweet = $(` <article>
           <header>
             <div class="username-with-icon">
-              <i class="fas fa-user-astronaut"></i>
+              <img src="${tweetObject.user.avatars}" class="avatar">
               <p>${tweetObject.user.name}</p>
             </div>
             <p class="hide">${tweetObject.user.handle}</p>
@@ -80,10 +76,12 @@ $(() => {
 
 
   $('#new-tweet').hide();
+  const $textarea = $('textarea');
     
   const $composeTweetBoxSection = $('.new-tweet');
   $('.write-tweet-button-container').on('click', function() {
     $composeTweetBoxSection.slideDown("2000");
+    $textarea.focus();
   });
 
 
@@ -91,7 +89,6 @@ $(() => {
   $postTweetForm.on('submit', function(event) {
     event.preventDefault();
     $('.alert-messaging').hide();
-    const $textarea = $('textarea');
     const $tweetContent = $textarea.val();
     const $writeTweetBox = $('.tweet-box')
     const $alertBoxContainer = $('.alert-box-container');

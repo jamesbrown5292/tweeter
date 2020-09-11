@@ -1,22 +1,10 @@
-/*##### DESKTOP VIEW ##########*/
-/* @media (min-width: 1024px ) {
-  .user-header {
-    order: 0;
-    margin-top: 5em;
-    align-self: flex-start;
-    width: 33%;
-    height: 65%;
-  }
-
-  .all-users-tweets {
-    order: 1;
-    width: 50%;
-  }
-} */
-
 
 /*DESKTOP VIEW */
 @media (min-width: 1023px ) {
+  .avatar {
+    margin-right: 1em;
+    margin-top: 0.4em;
+  }
 
   .compose-and-view {
     display: flex;
@@ -73,13 +61,17 @@
   .username-with-icon {
     display: flex;
     align-items: center;
-    flex-basis: 20%;
+    flex-basis: 30%;
     justify-content: space-between;
   }
 }
 
 /*Tablet View*/
 @media (max-width: 1023px ) {
+  .avatar {
+    margin-right: 1em;
+    margin-top: 0.4em;
+  }
 
   .compose-and-view {
     display: flex;
@@ -137,13 +129,20 @@
   .username-with-icon {
     display: flex;
     align-items: center;
-    flex-basis: 20%;
+    flex-basis: 40%;
+    width: 50%
     justify-content: space-between;
   }
 }
 
 /* Mobile View */
 @media (max-width: 600px) {
+
+  .avatar {
+    margin-right: 1em;
+    margin-top: 0.4em;
+  }
+
   .compose-and-view {
     display: flex;
     flex-direction: column;
