@@ -64,6 +64,11 @@
     flex-basis: 30%;
     justify-content: space-between;
   }
+
+  .like-fav-retweet-icons {
+    color: rgba(180,183,240,1);
+  }
+  
 }
 
 
@@ -131,8 +136,12 @@
     display: flex;
     align-items: center;
     flex-basis: 40%;
-    width: 50%
+    width: 50%;
     justify-content: space-between;
+  }
+
+  .like-fav-retweet-icons {
+    color: rgba(180,183,240,1);
   }
 }
 
@@ -156,4 +165,9 @@
     font-family: Source Sans Pro;  /*set fall back font if this fails*/
     font-weight: 300;
   }
+
+  .like-fav-retweet-icons {
+    color: rgba(180,183,240,1);
+  }
+  
 }

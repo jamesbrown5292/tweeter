@@ -51,7 +51,7 @@ $(() => {
           <p class="tweet-article-body">${escape(tweetObject.content.text)}</p>
           <footer>
             <p>${convertTime(tweetObject.created_at)}</p>
-            <div class="like-fav-retweet-icons">
+            <div class="like-fav-retweet-icons hide">
               <i class="fas fa-heart"></i>
               <i class="fas fa-retweet"></i>
               <i class="fas fa-flag"></i>
@@ -71,7 +71,7 @@ $(() => {
     $allTweetsSection.empty();
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $allTweetsSection.append($tweet);
+      $allTweetsSection.prepend($tweet);
     }
   };
 
