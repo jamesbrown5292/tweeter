@@ -6,6 +6,16 @@ $(() => {
   $('.arrowicon').effect('bounce', "fast");
   $('#new-tweet').hide();
 
+  //Clicking write tweet icon in top right
+  $('.write-tweet-button-container').on('click', function() {
+    if ($composeTweetSection.is(":hidden")) {
+      $composeTweetSection.slideDown("2000");
+      $textInputField.focus();
+    } else {
+      $composeTweetSection.slideUp("2000");
+    }
+  });
+
   const createTweetElement = (tweetObject) => {
 
     //escape function to prevent XSS
@@ -86,13 +96,8 @@ $(() => {
   };
 
   loadTweets();
-
-  $('.write-tweet-button-container').on('click', function() {
-    $composeTweetSection.slideDown("2000");
-    $textInputField.focus();
-  });
-
-
+  
+  //Submit tweet - validation and post request
   $postTweetForm.on('submit', function(event) {
     event.preventDefault();
     $('.alert-messaging').hide();
