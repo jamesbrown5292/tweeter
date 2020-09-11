@@ -10,6 +10,8 @@
 
   header {
     margin: 0;
+    display: flex;
+    justify-content: space-between;
   }
   .user-header {
     background-color: #d89a39;
@@ -21,6 +23,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    
   }
 
   .user-full-name {
