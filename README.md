@@ -24,14 +24,16 @@ The app is designed for 3 viewport sizes: monitor, tablet and mobile.
 
 !["Desktop app page"](https://github.com/jamesbrown5292/tweeter/blob/master/public/images/Desktop%20View.png)
 
-
+- Screenshot of the desktop version
 
 !["Tablet View"](https://github.com/jamesbrown5292/tweeter/blob/master/public/images/Tablet-view.png)
 
+- Screenshot of the tablet version with transparent nav bar and centered content
 
 
 !["Mobile View"](https://github.com/jamesbrown5292/tweeter/blob/master/public/images/Mobile%20View.png)
 
+- Screenshot of the mobile version with transparent nav bar and centered content and smaller text.
 
 
 ## Dependencies
